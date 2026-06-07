@@ -8,44 +8,86 @@
 </head>
 <body>
 
+  <!-- Nav -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-icon">D</div>
+      <span class="logo-text">DEAN</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm Dean.</h1>
-      <p class="hero-sub">Law student. Advocate in the making.</p>
-      <a href="#contact" class="btn">Get In Touch</a>
+    <div class="hero-split">
+      <div class="hero-left">
+        <div class="orange-line"></div>
+        <h1>DEAN.</h1>
+        <p class="hero-tagline">I'm passionate about justice and driven by impact.</p>
+        <p class="hero-body">
+          I'm a law student with a commitment to advocacy, rigorous thinking,
+          and making a meaningful difference. I believe the law is one of the
+          most powerful tools for shaping a fairer world.
+        </p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+      <div class="hero-right">
+        <div class="image-placeholder">
+          <span>Your Photo</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a law student with a passion for justice, clear thinking, and
-        making a difference. I'm currently working through my legal studies
-        while building practical experience in research, writing, and
-        advocacy. When I'm not buried in case law, I'm exploring how the
-        law shapes everyday life.
-      </p>
+    <div class="about-split">
+      <div class="about-left">
+        <div class="orange-line"></div>
+        <h2>ABOUT.</h2>
+        <p class="about-tagline">I'm passionate about justice and driven by impact.</p>
+        <p class="about-body">
+          I'm a law student with a passion for justice, clear thinking, and
+          making a difference. I'm currently working through my legal studies
+          while building practical experience in research, writing, and
+          advocacy.
+        </p>
+        <p class="about-body">
+          When I'm not buried in case law, I'm exploring how the law shapes
+          everyday life — and I'm excited by the challenges my career will
+          bring as it unfolds.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="image-placeholder">
+          <span>Your Photo</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
+    <div class="contact-inner">
+      <div class="orange-line"></div>
+      <h2>CONTACT.</h2>
       <p class="contact-sub">Have a question or want to connect? Send me a message.</p>
       <form id="contact-form" novalidate>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" />
-          <span class="error" id="name-error"></span>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" />
-          <span class="error" id="email-error"></span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+            <span class="error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" />
+            <span class="error" id="email-error"></span>
+          </div>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
