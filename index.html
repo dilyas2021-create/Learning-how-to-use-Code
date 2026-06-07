@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dean — Law Student</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Dean.</h1>
+      <p class="hero-sub">Law student. Advocate in the making.</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a law student with a passion for justice, clear thinking, and
+        making a difference. I'm currently working through my legal studies
+        while building practical experience in research, writing, and
+        advocacy. When I'm not buried in case law, I'm exploring how the
+        law shapes everyday life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="contact-sub">Have a question or want to connect? Send me a message.</p>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+          <span class="error" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" />
+          <span class="error" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..."></textarea>
+          <span class="error" id="message-error"></span>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form-success" id="form-success">Thanks! Your message has been sent.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Dean. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
