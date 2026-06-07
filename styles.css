@@ -6,37 +6,35 @@
 }
 
 :root {
-  --black:  #111111;
-  --dark:   #1a1a1a;
-  --orange: #e8622a;
-  --white:  #ffffff;
-  --muted:  rgba(255,255,255,0.55);
-  --body-text: rgba(255,255,255,0.75);
+  --navy:    #0b1a2e;
+  --navy2:   #0f2440;
+  --navy3:   #122b4a;
+  --orange:  #e8622a;
+  --white:   #ffffff;
+  --muted:   rgba(255,255,255,0.55);
+  --body-txt: rgba(255,255,255,0.78);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: var(--black);
+  background: var(--navy);
   color: var(--white);
   line-height: 1.7;
 }
 
-/* ── Nav ── */
+/* ────────────── NAV ────────────── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
-  background: var(--black);
+  padding: 22px 60px;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-logo {
@@ -54,15 +52,13 @@ nav {
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 800;
 }
 
 .logo-text {
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  line-height: 1.2;
+  letter-spacing: 0.22em;
 }
 
 .nav-links {
@@ -74,9 +70,9 @@ nav {
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: color 0.2s;
 }
@@ -85,10 +81,10 @@ nav {
 .nav-links a.active {
   color: var(--white);
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 5px;
 }
 
-/* ── Orange accent line ── */
+/* ────────────── ORANGE LINE ────────────── */
 .orange-line {
   width: 120px;
   height: 2px;
@@ -96,30 +92,24 @@ nav {
   margin-bottom: 28px;
 }
 
-/* ── Hero ── */
+/* ────────────── HERO ────────────── */
 #hero {
+  padding-top: 80px;           /* clear fixed nav */
   min-height: 100vh;
-  padding-top: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.hero-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 80px);
 }
 
 .hero-left {
-  background: var(--black);
-  padding: 80px 60px;
+  background: var(--navy);
+  padding: 100px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .hero-left h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
@@ -129,32 +119,28 @@ nav {
 .hero-tagline {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hero-body {
-  font-size: 0.9rem;
-  color: var(--body-text);
+  font-size: 0.875rem;
+  color: var(--body-txt);
   max-width: 420px;
   margin-bottom: 40px;
 }
 
 .hero-right {
-  background: #2a2a2a;
+  background: var(--navy3);
+  min-height: 100%;
   position: relative;
-  overflow: hidden;
 }
 
-/* ── About ── */
+/* ────────────── ABOUT ────────────── */
 #about {
-  background: var(--dark);
-}
-
-.about-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 90vh;
+  background: var(--navy2);
 }
 
 .about-left {
@@ -165,55 +151,55 @@ nav {
 }
 
 .about-left h2 {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
   margin-bottom: 32px;
 }
 
-.about-left h2::after { display: none; }
+/* kill the default underline pseudo from h2 */
+.about-left h2::after,
+#contact h2::after { display: none; }
 
 .about-tagline {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--white);
   margin-bottom: 20px;
 }
 
 .about-body {
   font-size: 0.875rem;
-  color: var(--body-text);
+  color: var(--body-txt);
   max-width: 440px;
   margin-bottom: 16px;
 }
 
 .about-right {
-  background: #e5e0d8;
+  background: var(--navy3);
   position: relative;
-  overflow: hidden;
 }
 
-/* ── Image placeholder ── */
+/* ────────────── IMAGE PLACEHOLDER ────────────── */
 .image-placeholder {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.3);
-  border: 2px dashed rgba(0,0,0,0.15);
+  color: rgba(255,255,255,0.2);
+  border: 2px dashed rgba(255,255,255,0.1);
   margin: 24px;
   border-radius: 4px;
 }
 
-/* ── Contact ── */
+/* ────────────── CONTACT ────────────── */
 #contact {
-  background: var(--black);
+  background: var(--navy);
 }
 
 .contact-inner {
@@ -223,17 +209,15 @@ nav {
 }
 
 #contact h2 {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -2px;
   margin-bottom: 16px;
 }
 
-#contact h2::after { display: none; }
-
 .contact-sub {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-bottom: 48px;
 }
@@ -257,7 +241,7 @@ nav {
 }
 
 label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -268,26 +252,17 @@ input, textarea {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.95rem;
   padding: 14px 16px;
-  background: #1e1e1e;
-  border: 1px solid #333;
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 4px;
   color: var(--white);
   transition: border-color 0.2s;
   resize: vertical;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #555;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--orange);
-}
-
-input.invalid, textarea.invalid {
-  border-color: #e74c3c;
-}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+input:focus, textarea:focus { outline: none; border-color: var(--orange); }
+input.invalid, textarea.invalid { border-color: #e74c3c; }
 
 .error {
   font-size: 0.78rem;
@@ -295,15 +270,15 @@ input.invalid, textarea.invalid {
   min-height: 1em;
 }
 
-/* ── Button ── */
+/* ────────────── BUTTON ────────────── */
 .btn {
   display: inline-block;
   background: var(--orange);
   color: var(--white);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 16px 40px;
   border: none;
@@ -314,20 +289,17 @@ input.invalid, textarea.invalid {
   transition: background 0.2s, transform 0.15s;
 }
 
-.btn:hover {
-  background: #cf521f;
-  transform: translateY(-2px);
-}
+.btn:hover { background: #cf521f; transform: translateY(-2px); }
 
 .form-success {
   display: none;
-  color: #2ecc71;
+  color: #4cd97b;
   font-size: 0.9rem;
 }
 
-/* ── Footer ── */
+/* ────────────── FOOTER ────────────── */
 footer {
-  background: #0d0d0d;
+  background: #070f1c;
   color: var(--muted);
   text-align: center;
   padding: 28px;
@@ -335,43 +307,28 @@ footer {
   letter-spacing: 0.05em;
 }
 
-/* ── Responsive ── */
+/* ────────────── RESPONSIVE ────────────── */
 @media (max-width: 768px) {
-  nav {
-    padding: 16px 24px;
-  }
+  nav { padding: 16px 24px; }
+  .nav-links { gap: 18px; }
 
-  .nav-links {
-    gap: 20px;
-  }
-
-  .hero-split,
-  .about-split {
+  #hero,
+  #about {
     grid-template-columns: 1fr;
   }
 
   .hero-right,
   .about-right {
-    min-height: 300px;
-    display: block;
+    min-height: 260px;
     position: relative;
   }
 
   .hero-left,
-  .about-left {
-    padding: 60px 24px;
-  }
+  .about-left { padding: 60px 24px; }
 
-  .contact-inner {
-    padding: 60px 24px;
-  }
+  .contact-inner { padding: 60px 24px; }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+  .form-row { grid-template-columns: 1fr; }
 
-  .btn {
-    align-self: stretch;
-    text-align: center;
-  }
+  .btn { align-self: stretch; text-align: center; }
 }
